@@ -1,0 +1,530 @@
+
+/* font-family: 'Courier Prime', monospace;
+font-family: 'Homemade Apple', cursive; */
+
+/* inicio header */
+
+body{
+    /* font-family: 'BenchNine', sans-serif; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: 500;
+    background-image: url("/images/textura.jpg");
+    background-attachment: fixed;
+ background-color: #cccccc;
+    /* line-height: 20px; */
+}
+h2{
+
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(113, 25, 6);
+    font-size: 28px;
+    text-shadow: 1px -1px 9px rgba(52,0,0,0.6);
+}
+header{
+    background-color: transparent;
+    padding: 20px 0 0 0;
+margin: 0%;
+/* height: 150px; */
+text-align: center;
+
+
+}
+header h1{
+    font-size: 80px;
+    color: rgb(113, 25, 6);
+text-align: center;
+font-family: 'Courier New', Courier, monospace;
+font-weight: bold;
+text-shadow: 7px 2px 15px rgba(52,0,0,0.6);
+position: relative;
+margin-top: 10px;
+}
+
+.social a img{
+
+    max-width: 25px;
+    max-height: 25px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    
+}
+.social a img:hover{
+    transform: scale(1.2);
+}
+/* fin header */
+/* inicio navegador */
+nav ul{
+    background-color: rgba(155, 122, 114, .5);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    list-style: none;
+    text-shadow: 1px -1px 9px rgba(52,0,0,0.6);
+    /* text-shadow: 1px -1px 9px rgba(0,0,0,0.6); */
+display: flex;
+justify-content: space-around;
+position: static;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgba(113, 25, 6, .8);
+    font-size: 20px;
+    display: block;
+    padding: 20px;
+margin: o;
+cursor: pointer;
+transition: all .3s ease;
+
+}
+
+nav ul li .activo{
+    background-color:rgba(155, 122, 114, .9);
+    color: white;
+    flex-grow: 1;
+}
+
+nav ul li a:hover{
+    background-color: rgba(155, 122, 114, .9);
+    color: white;
+    transform: scale(1.2);
+    
+}
+
+.dropbtn {
+    background-color: transparent;
+    font-weight: bold;
+    border: none;
+    text-shadow: 1px -1px 9px rgba(52,0,0,0.6);
+    
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(155, 122, 114, .5);
+    text-shadow: 1px -1px 9px rgba(155,122,114,0.8);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+    
+  }
+  
+  .dropdown-content a {
+    color: rgba(113, 25, 6, .8);
+    
+    text-decoration: none;
+    background-color: rgba(155, 122, 114, .5);
+    display: block;
+    
+  }
+  
+  .dropdown-content a:hover { background-color: rgba(155, 122, 114, .9);}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn 
+  {background-color: transparent}
+
+ /* fin navegador */
+/* inicio footer */
+footer{
+    background-color: rgba(155, 122, 114, .5);
+    clear: both;
+    color: rgba(153, 102, 102, .9);
+    text-align: center;
+    padding: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20PX;
+    margin-bottom: 30px;
+}
+/* fin footer */
+.holder{
+    width: 1060px;
+    margin: 0 auto;
+    
+
+}
+/* inicio index */
+.marylena{
+    background-color: rgba(255,255,255,0.4);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 1px -1px 8px rgba(0,0,0,0.45);
+    
+ 
+}
+.marylena img{
+    width: 200px;
+    height: 200px;
+    border-radius: 3px;
+    padding: 3px;
+    
+}
+.fotitosup{
+    display: flex;
+    opacity: .6;
+}
+.fotitosdown{
+   
+    display: flex;
+    justify-content: flex-end;
+    opacity: .6;
+}
+
+/* fin index */
+
+/* inicio obre */
+.libros{
+    display: flex;
+    justify-content: space-between;
+}
+.libro{
+    width: 320px;
+    height: 550px;
+    background-color: rgba(255,255,255,0.4);
+    text-align: center;
+    border: 5px solid rgba(153, 102, 102, .9);
+    border-radius: 5px;
+    
+}
+
+.libro h3{
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+.libro img{
+    width: 300px;
+    height: 432px;
+    margin-top: 20px;
+    opacity: .8;
+    transition: all .3s ease-in-out;
+  
+}
+.libro img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+    
+}
+.antologias{
+    display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+gap: 10px;
+}
+.antologia{
+    width: 220px;
+    height: 350px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.4);
+    text-align: center;
+    border: 5px solid rgba(153, 102, 102, .9);
+    border-radius: 5px;
+    
+    
+}
+.antologia h5{
+    margin: 0;
+    color: black;
+}
+.antologia img{
+    width: 200px;
+    height: 284px;
+    transition: all .3s ease-in-out;
+    opacity: .8;
+}
+.antologia img:hover{
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* fin obra */
+/* inicio libros: los html en particular */
+.sinopsis{
+    display: flex;
+    gap: 20px;
+    background-color: rgba(255,255,255,0.4);
+padding: 10px;
+line-height: 20px;
+}
+.sinopsis img{
+    border: solid 3px black;
+    padding: 2px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 432px;
+}
+.compra{
+    display: flex;
+     }
+.compra ul{
+    list-style: none;
+    margin: 5px; 
+ 
+}
+
+.compra ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    
+   
+}
+.compra ul li{
+    transition: all .3s ease-in-out;
+   
+}
+.compra ul li:hover{
+    transform: scale(1.3);
+    
+}
+.descripcion ul li a{
+    text-decoration: none;
+    color: black;
+    
+}
+.descripcion ul li{
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.descripcion ul li:hover{
+    font-weight: bold;
+    
+}
+/* fin libros */
+
+/* inicio novedades */
+.noticias{
+   /*  background-color: rgba(255,255,255,0.4); */
+    padding: 5px;
+    display: block;
+}
+.noticia{
+    width: 100%;
+    max-height: 300px;
+    border: 2px solid rgba(153, 102, 102, .9);
+    background-color: rgba(255,255,255,0.4);
+    margin: 5px;
+    border-radius: 20px;
+    padding: 10px;
+    transition: all .3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+  /*   background-image: url(img/periodico.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay; */
+    font-weight: bold;
+}
+
+.noticia h3{
+    text-decoration: underline;
+    
+}
+.noticia:nth-child(1){
+    height: 250px;
+    text-align: left;
+    
+    background-image: url(/images/historia.png);
+    background-blend-mode: color-burn;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+display: block;
+    
+}
+.noticia:nth-child(1) a{
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.noticia:nth-child(1) .notita{
+    font-weight: bold;
+    text-align: left;
+}
+
+.fotito img{
+    width: 90px;
+    height: 138px;
+/* position: relative;
+left: 50px;
+ */
+}
+.notita{
+    text-align: center;
+}
+
+.noticia a{
+    text-decoration: none;
+    color: black;
+}
+/* las noticias van a ser links a paginas externas */
+.noticia:hover{
+    transform: scale(1.05);
+    background-color: rgba(255,255,255,0.8);
+
+}
+/* fin novedades */
+/* inicio foro */
+.articulos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.articulo{
+    width: 30%; 
+    overflow:scroll;
+    background-color: rgba(255,255,255,0.4);
+  margin: 5px;
+  border: 2px solid rgba(153, 102, 102, .9);
+  padding: 10px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+ /*  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px; */
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+ 
+}
+.articulo a{
+  color: black;
+  text-decoration: none;
+}
+.articulo:nth-child(1){
+    background-image: url(/images/escribiendo.png);
+
+    background-repeat: no-repeat;
+
+}
+.articulo:nth-child(3){
+    background-image: url(/images/maquina.jpj.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.articulo:nth-child(6){
+    background-image: url(/images/idea.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.articulo:nth-child(4n+1){
+    width: 100%;
+    height: 120px;
+}
+.articulo:hover{
+    transform: scale(1.05);
+    background-color: rgba(255,255,255,0.8);
+}
+
+.articulo img{
+    width: 70px;
+    height: 90px;
+}
+
+
+/* los articulos van a ser links a paginas aparte */
+/* fin foro */
+/* inicio articulo 1: la microficcion */
+.opinion{
+    background-color: rgba(255,255,255,0.4);
+    background-image: url(/images/escribiendo.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: right;
+    background-position-y: bottom ;
+    padding: 15px;
+}
+.opinion h2{
+    margin-bottom: 40px
+}
+.firma{
+    font-weight: bold;
+    text-align: right;
+    margin-top: 30px;
+}
+/* fin articulo 1: la microficcion */
+/* inicio contacto */
+.medios h2{
+padding-bottom: 20px;    
+}
+.formulario{
+    display: flex;
+    gap: 50px;
+    background-color: rgba(255,255,255,0.4);
+    padding: 5px 15px;
+   
+}
+.formulario div{
+    width: 100%;
+}
+form p label{
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+form input, 
+form textarea{
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 5px;
+    border: 3px solid rgba(155, 122, 114, .9);
+    padding: 6px;
+    width: 100%;
+    resize: none;
+}
+form textarea{
+    height: 150px;
+}
+form input[type="submit"]{
+    background-color: rgba(155, 122, 114, 1);
+    width: 20%;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    border: 5px solid rgba(153, 102, 102, .9);
+    position: relative;
+    left: 400px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+form input[type="submit"]:hover{
+    transform: scale(1.2);
+}
+.redes{
+    cursor: pointer;
+    
+}
+
+.redes a{
+    text-decoration: none;
+    color: black;
+    transition: all .3s ease-in-out;
+    
+}
+.redes:hover a{
+    transform: scale(1.1);
+    font-weight: bold;
+    
+}
+
+
+/* fin contacto */
+

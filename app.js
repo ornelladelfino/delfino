@@ -5,7 +5,14 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var obraRouter = require('./routes/obra');
+var foroRouter = require('./routes/foro');
+var novedadesRouter = require('./routes/novedades');
+var contactoRouter = require('./routes/contacto');
+var fragmentosRouter = require('./routes/fragmentos');
+var ventanasRouter = require('./routes/ventanas');
+var historiaRouter = require('./routes/historia');
+var articuloRouter = require('./routes/articulo');
 
 var app = express();
 
@@ -20,7 +27,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/obra', obraRouter);
+app.use('/foro', foroRouter);
+app.use('/novedades', novedadesRouter);
+app.use('/contacto', contactoRouter);
+app.use('/fragmentos', fragmentosRouter);
+app.use('/ventanas', ventanasRouter);
+app.use('/historia', historiaRouter);
+app.use('/la_microficcion', articuloRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

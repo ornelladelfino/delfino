@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marylena cambarieri
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Homemade+Apple&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/malicane.css">
+</head>
+
+<body>
+    <header class="holder">
+        <div class="social">
+            <a href="https://www.facebook.com/marylena.cambarieri.14 " target="_blank"><img src="images/facebook.png" alt="facebook"></a>
+            <a href="https://www.instagram.com/marylenacambarieri/" target="_blank"><img src="images/instagram.png" alt="instagram"></a>
+        </div>
+        <h1>Marylena Cambarieri</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/" class="{{#if isHome}}activo{{/if}}">Inicio</a></li>
+            <li><div class="dropdown">
+                <button class="dropbtn"><a href="obra" class="{{#if isObra}}activo{{/if}}">Publicaciones</a></button>
+                <div class="dropdown-content">
+                  <a href="fragmentos">Fragmentos del Angel</a>
+                  <a href="ventanas">Las Otras ventanas</a>
+                  <a href="historia">Tomada por su historia</a>
+                </div></div></li>
+            <li><a href="novedades" class="{{#if isNovedades}}activo{{/if}}">Novedades</a>
+              </li>
+            <li><a href="foro" class="{{#if isForo}}activo{{/if}}">Club de Lectura</a></li>
+            <li><a href="contacto" class="{{#if isContacto}}activo{{/if}}">Contacto</a></li>
+        </ul>
+    </nav>
+    <main class="holder">
+
     {{{body}}}
-  </body>
+  </main>
+    <footer>
+        Diseñado por Ornella Delfino - 2022
+    </footer>
+</body>
+
 </html>

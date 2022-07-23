@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET novedades page. */
 router.get('/', function(req, res, next) {
-  res.render('index', {
-    isHome:true
+  res.render('novedades', {
+    isNovedades:true
   });
 });
 
