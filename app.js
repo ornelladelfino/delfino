@@ -6,6 +6,8 @@ var logger = require('morgan');
 
 require('dotenv').config();/* para que cargue los datos del archivo .env */
 
+var session = require('express-session');
+
 var indexRouter = require('./routes/index');
 var obraRouter = require('./routes/obra');
 var foroRouter = require('./routes/foro');
@@ -28,6 +30,28 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret: 'qwertyuioppoiuytrewq',
+  cookie:{MaxAge:null},
+  resave: false,
+  saveUninitialized: true,
+}))
+
+secured = async (req, res, next) => {
+  try {
+    console.log(req.session.id_usuario);
+    if (req.session.id_usuario) {
+      next();
+
+    } else {
+      res.redirect('/admin/login')
+    }
+
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 app.use('/', indexRouter);
 app.use('/obra', obraRouter);
