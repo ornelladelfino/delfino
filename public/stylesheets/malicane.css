@@ -145,6 +145,14 @@ footer{
     margin-top: 20PX;
     margin-bottom: 30px;
 }
+footer .login{
+    color: rgba(153, 102, 102, 1);
+    font-weight: bolder;
+    text-decoration: none;
+}
+footer .login:hover{
+    color: rgba(113, 25, 6, .8);
+}
 /* fin footer */
 .holder{
     width: 1060px;
