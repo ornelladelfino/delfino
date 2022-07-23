@@ -524,7 +524,11 @@ form input[type="submit"]:hover{
     font-weight: bold;
     
 }
-
+.envio{
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: end;
+}
 
 /* fin contacto */
 
