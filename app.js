@@ -61,7 +61,7 @@ app.use('/contacto', contactoRouter);
 app.use('/fragmentos', fragmentosRouter);
 app.use('/ventanas', ventanasRouter);
 app.use('/historia', historiaRouter);
-app.use('/la_microficcion', articuloRouter);
+app.use('/articulo', articuloRouter);
 app.use('/admin/login', loginRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

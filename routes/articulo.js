@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET articulo page. */
 router.get('/', function(req, res, next) {
-  res.render('la_microficcion');
+  res.render('articulo');
 });
 
 module.exports = router;
