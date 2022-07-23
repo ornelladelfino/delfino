@@ -1,0 +1,25 @@
+.input{ 
+    background-color: transparent;
+
+}
+.boton{
+    background-color: rgba(155, 122, 114, 1);
+    width: 20%;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    border: 5px solid rgba(153, 102, 102, .9);
+    position: relative;
+    left: 400px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+padding: 5px;}
+
+label{
+    font-weight: bold;
+    color: rgb(113, 25, 6);
+}
+
+footer{
+    margin-top: 50px;
+}

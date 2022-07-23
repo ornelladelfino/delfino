@@ -15,6 +15,7 @@ var fragmentosRouter = require('./routes/fragmentos');
 var ventanasRouter = require('./routes/ventanas');
 var historiaRouter = require('./routes/historia');
 var articuloRouter = require('./routes/articulo');
+var loginRouter = require('./routes/admin/login');
 
 var app = express();
 
@@ -37,7 +38,7 @@ app.use('/fragmentos', fragmentosRouter);
 app.use('/ventanas', ventanasRouter);
 app.use('/historia', historiaRouter);
 app.use('/la_microficcion', articuloRouter);
-
+app.use('/admin/login', loginRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
