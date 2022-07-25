@@ -28,3 +28,27 @@ footer{
     font-size: 20px;
     margin-top: 20px;
 }
+.secciones{
+    display: flex;
+    justify-content: center;
+}
+.seccion{
+    height: 100px;
+    width: 300px;
+    background-color: rgba(155, 122, 114, .5);
+    font-size: 30px;
+    color: rgba(113, 25, 6, .8);
+    font-weight: bold;
+    border: 5px solid rgba(153, 102, 102, 1);
+    cursor: pointer;
+padding: 5px;
+margin: 50px;
+transition: all .3s ease-in-out;}
+
+.seccion:hover{
+    transform: scale(1.2);
+}
+.salir{
+    color: rgba(113, 25, 6, .8);
+    text-decoration: none;
+}
