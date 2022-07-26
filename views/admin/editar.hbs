@@ -1,4 +1,33 @@
-<div class="secciones"><button class="seccion">Artículos</button>
-<button class="seccion">Novedades</button></div>
+<div class="secciones"><button class="seccion"> <a class="link" href="login/logout">Salir <i
+                class="fa-solid fa-arrow-right-from-bracket"></i></a> </button></div>
+<h2>Artículos</h2>
+ <div >
+      <a href=" /admin/editar/agregar" class="boton link seccion">Nuevo <i class="fa-solid fa-plus"></i></a>
+    </div>
+    <br>
+    <br>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Título</th>
+      <th scope="col">Subtitulo</th>
+      <th scope="col">Resumen</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+      {{#each articulos}}
+    <tr>
+      <th scope="row">{{id}}</th>
+      <td>{{titulo}}</td>
+      <td>{{subtitulo}}</td>
+      <td>{{resumen}}</td>
+      <td class="text-end"><a href="admin/editar/modificar/{{id}}" class="btn btn-secondary"><i class="fa-solid fa-pencil"></i></a>
+                <a href="admin/editar/eliminar/{{id}}" class="btn btn-secondary"><i class="fa-solid fa-trash-can"></i></a>
+    </tr>
+    {{/each}}
+    
+  </tbody>
+</table>
 
-<div class="secciones"><button class="seccion"> <a class="salir" href="login/logout">Salir <i class="fa-solid fa-arrow-right-from-bracket"></i></a> </button></div>

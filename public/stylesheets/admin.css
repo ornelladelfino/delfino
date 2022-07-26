@@ -47,8 +47,13 @@ transition: all .3s ease-in-out;}
 
 .seccion:hover{
     transform: scale(1.2);
+    color: rgba(113, 25, 6, .8);
+
 }
-.salir{
+.seccion:hover a{
+    color: rgba(113, 25, 6, .8);
+}
+.link{
     color: rgba(113, 25, 6, .8);
     text-decoration: none;
 }

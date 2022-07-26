@@ -1,0 +1,37 @@
+<div class="container margenes">
+    <div class="row">
+        <div class="col">
+            <h2>Modificar el artículo número {{articulo.id}}</h2>
+            <br>
+            <br>
+           
+            <form action="/admin/editar/modificar" method="post">
+             <input type="hidden" value="{{articulos.id}}" name="id">
+                <div class="mb-3">
+                    <label class="form-label">Título</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="titulo" value="{{articulo.titulo}}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Subtítulo</label>
+                   <textarea class="form-control" name="subtitulo" rows="3">{{articulo.subtitulo}}</textarea>
+                </div>
+                 <div class="mb-3">
+                    <label class="form-label">Resumen/label>
+                   <textarea class="form-control" name="resumen" rows="10">{{articulo.resumen}}</textarea>
+                </div>
+                   <div class="mb-3">
+                    <label class="form-label">Cuerpo</label>
+                   <textarea class="form-control" name="cuerpo" rows="10">{{articulo.cuerpo}}</textarea>
+                </div>
+                   <div class="mb-3">
+                    <label class="form-label">Autor</label>
+                   <textarea class="form-control" name="autor" rows="10">{{articulo.autor}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">Modificar</button>
+            </form>
+          {{#if error}}
+          <p>{{message}}</p>
+        {{/if}}
+        </div>
+    </div>
+</div>
