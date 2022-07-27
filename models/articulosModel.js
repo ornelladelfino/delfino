@@ -16,17 +16,17 @@ async function insertArticulo(obj) {
         throw error;
     }
 }
-async function deleteArticuloByID(id) {
-    var query = 'delete from articulos where id =?';
-    var rows = await pool.query(query, [id]);
-    return rows;
 
-}
+
+
 async function getArticuloByID(id) {
     var query = 'select * from articulos where id=?';
     var rows = await pool.query(query, [id]);
     return rows[0];
 }
+/* hasta aca, todo bien y en funcionamiento */
+
+/* a partir de aca, tengo que revisar y no encuentro el problema */
 
 async function modificarArticuloByID(obj, id) {
     try {
@@ -41,6 +41,11 @@ async function modificarArticuloByID(obj, id) {
 }
 
 
+async function deleteArticuloByID(id) {
+    var query = 'delete from articulos where id =?';
+    var rows = await pool.query(query, [id]);
+    return rows;
 
+}
 
 module.exports = { getArticulos, insertArticulo, deleteArticuloByID, getArticuloByID, modificarArticuloByID }

@@ -44,14 +44,9 @@ router.post('/agregar', async(req, res, next) =>{
     }
 })
 
-/* hasta aca perfecto */
 
-router.get('/eliminar/:id', async (req, res, next) =>{
-    /* console.log(req.params.id); */
-    var id = req.params.id;
-    await articulosModel.deleteArticuloByID(id);
-    res.redirect('admin/editar')
-})
+
+
 
 
 router.get('/modificar/:id', async(req, res, next) =>{
@@ -62,7 +57,9 @@ router.get('/modificar/:id', async(req, res, next) =>{
         articulo
      
 })
+
 })
+/* hasta aca perfecto. llego hasta la pagina de modificar, pero cuando hago la modificacion no me redirecciona bien. asumo que es un tema de rutas pero intente conbarra, sin barra, cambiando volviendo, en fin. necesito ojo externo */
 router.post('/modificar/id', async(req, res, next) =>{
     try{
         var obj = {
@@ -73,7 +70,7 @@ router.post('/modificar/id', async(req, res, next) =>{
             autor:req.body.autor
         }
         await articulosModel.modificarArticuloByID(obj, req.body.id)
-        res.redirect('/admin/editar')
+        res.redirect('admin/editar')
     }catch(error){
 /* console.log(error) */
 res.render('admin/modificar', {
@@ -83,7 +80,12 @@ res.render('admin/modificar', {
 }) 
     }
 })
-
+router.get('/eliminar/:id', async (req, res, next) =>{
+    /* console.log(req.params.id); */
+    var id = req.params.id;
+    await articulosModel.deleteArticuloByID(id);
+    res.redirect('admin/editar')
+})
 
 
 module.exports=router;
