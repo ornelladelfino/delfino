@@ -24,7 +24,8 @@
         </div>
         <h1>Marylena Cambarieri</h1>
     </header>
-    <nav>
+    <nav class="holder movilholder">
+        
         <ul>
             <li><a href="/" class="{{#if isHome}}activo{{/if}}">Inicio</a></li>
             <li><div class="dropdown">
@@ -39,6 +40,7 @@
             <li><a href="foro" class="{{#if isForo}}activo{{/if}}">Club de Lectura</a></li>
             <li><a href="contacto" class="{{#if isContacto}}activo{{/if}}">Contacto</a></li>
         </ul>
+        <a href="#" id="menuToggle">Menú</a>
     </nav>
     <main class="holder">
 
@@ -49,6 +51,7 @@
        <div> <a class="login" href="/admin/login">Administrador</a></div> 
        
     </footer>
+    <script src="javascripts/nav.js"></script>
 </body>
 
 </html>

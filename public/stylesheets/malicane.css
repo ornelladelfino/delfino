@@ -66,6 +66,9 @@ display: flex;
 justify-content: space-around;
 position: static;
 }
+#menuToggle{
+    display: none;
+}
 nav ul li a{
     text-decoration: none;
     color: rgba(113, 25, 6, .8);

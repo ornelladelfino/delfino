@@ -19,7 +19,7 @@ var historiaRouter = require('./routes/historia');
 var articuloRouter = require('./routes/articulo');
 var loginRouter = require('./routes/admin/login');
 var editarRouter = require('./routes/admin/editar');
-var articulosRouter = require('./routes/admin/articulos');
+
 
 var app = express();
 
@@ -66,7 +66,7 @@ app.use('/historia', historiaRouter);
 app.use('/articulo', articuloRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/editar', secured, editarRouter);
-app.use('/admin/articulos', articulosRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
