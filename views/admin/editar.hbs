@@ -1,6 +1,13 @@
+<h2>Hola {{persona}}</h2>
 <div class="secciones"><button class="seccion"> <a class="link" href="login/logout">Salir <i
                 class="fa-solid fa-arrow-right-from-bracket"></i></a> </button></div>
 <h2>Artículos</h2>
+ <form action="/admin/editar" method="get" class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="q" {{#if q}}value="{{q}}"{{/if}}>
+        <button class="btn btn-secondary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <br>
+      <br>
  <div >
       <a href=" /admin/editar/agregar" class="boton link seccion">Nuevo <i class="fa-solid fa-plus"></i></a>
     </div>
@@ -29,5 +36,11 @@
     {{/each}}
     
   </tbody>
+   </table>
+        {{#if is_search}}
+        {{#unless articulos.length}}
+        <p>No se encontraron resultados para <b>{{q}}</b></p>
+        {{/unless}}
+        {{/if}}
 </table>
 

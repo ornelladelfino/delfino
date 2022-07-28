@@ -4,11 +4,20 @@ var articulosModel = require('../../models/articulosModel')
 
 
 router.get('/', async function(req, res, next) {
-    var articulos = await articulosModel.getArticulos();  
+    /* var articulos = await articulosModel.getArticulos();  */ 
+    var articulos
+    if(req.query.q=== undefined){
+        articulos = await articulosModel.getArticulos();
+    }else{
+        articulos = await articulosModel.buscarArticulos(req.query.q);
+    }
    
     res.render('admin/editar', {
         layout: 'admin/layout',
-        articulos
+        persona: req.session.nombre,
+        articulos,
+        q:req.query.q,
+        is_search:req.query.q !==undefined
     }); 
     
 })
@@ -43,9 +52,6 @@ router.post('/agregar', async(req, res, next) =>{
         
     }
 })
-
-
-
 
 
 

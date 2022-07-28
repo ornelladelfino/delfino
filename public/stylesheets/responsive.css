@@ -18,6 +18,7 @@ nav ul.holder{
     padding-left: 0;
     padding-right: 0;
     max-height: 0;
+    box-sizing: border-box;
 
 }
 nav.abierto ul.holder{
@@ -86,6 +87,7 @@ display: inline-block;
 .formulario{
     display: block;
    width: 100%;
+   box-sizing: border-box;
 
 }
 form input[type="submit"]{
@@ -100,10 +102,14 @@ form input[type="submit"]{
     padding-left: 15px;
     padding-right: 15px;
     margin: 0;
+    box-sizing: border-box;
 }
 footer{
     width: 100%;
 }
 .dropdown-content{
     display: none;
+}
+body{
+    box-sizing: border-box ;
 }

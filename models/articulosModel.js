@@ -48,4 +48,10 @@ async function deleteArticuloByID(id) {
 
 }
 
-module.exports = { getArticulos, insertArticulo, deleteArticuloByID, getArticuloByID, modificarArticuloByID }
+async function buscarArticulos(busqueda){
+    var query = 'select * from articulos where titulo like ? or subtitulo like ? or cuerpo like ?';
+    var rows = await pool.query(query, ['%' + busqueda + '%', '%' + busqueda + '%', '%' + busqueda + '%']);
+    return rows;
+   }
+
+module.exports = { getArticulos, insertArticulo, deleteArticuloByID, getArticuloByID, modificarArticuloByID, buscarArticulos }

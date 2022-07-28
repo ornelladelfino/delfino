@@ -1,93 +1,21 @@
-<div class="articulos">
-            <div class="articulo">
-                <div><a href="articulo">
-                        <h3>La microficción-
 
-                            Touch, comprimido y algo más.
-
-                            De mi experiencia</h3>
-                       <p>La microficción es una de las experiencias de la brevedad: un macromundo contenido en pocas palabras... (Leer más)</p>
-                    </a>
-                </div>
-
-            </div>
-            <div class="articulo">
-                <div>
-                    <h3>Acá puede ir una poesía</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, dignissimos inventore.
-                        Ratione,
-                        tempora animi ab molestiae eius reprehenderit in minima nesciunt aliquam, ea impedit suscipit
-                        aperiam quaerat a iste et?</p>
-                </div>
-
-            </div>
-
-            <div class="articulo">
-                <div>
-                    <h3>Acá puede ir lo que me digan que va</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem perspiciatis dolorum totam
-                        excepturi, atque veritatis autem error cupiditate. Vero ipsa, possimus architecto est
-                        repellendus
-                        earum nemo blanditiis cu</p>
-                </div>
-
-            </div>
-
-            <div class="articulo">
-                <div>
-                    <h3>Mirá esto</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum harum voluptate et impedit, error
-                        ipsum dolore qui deserunt debitis aliquid cupiditate, laudantium asperiores laboriosam. Ex ipsam
-                        quis quidem ducimus sed.</p>
-                </div>
-
-            </div>
-
-            <div class="articulo">
-                <div>
-                    <h3>Mirá esto</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim animi facere, voluptatibus ea sint
-                        pariatur ullam temporibus placeat ducimus veritatis a, suscipit illo distinctio fuga adipisci
-                        aspernatur esse, dicta iste!</p>
-                </div>
-               
-            </div>
-
-            <div class="articulo">
-                <div>
-                    <h3>Mirá esto</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga amet earum consequuntur, nobis
-                        laboriosam doloremque eligendi, eum nihil autem inventore, tempora vitae cum voluptatem
-                        obcaecati
-                        deleniti numquam! Facilis, iusto cumque!</p>
-                </div>
-
-            </div>
-            <div class="articulo">
-                <div>
-                    <h3>Mirá esto</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum temporibus cumque placeat tenetur
-                        repellat, illo doloremque animi ut exercitationem rem quisquam. Doloribus ut iste debitis ad
-                        incidunt suscipit error voluptates.</p>
-                </div>
-            </div>
-            <div class="articulo">
-                <div>
-                    <h3>Mirá esto</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati dicta, illo
-                        expedita
-                        voluptatem molestias, nostrum pariatur numquam inventore ratione ducimus sunt accusantium vel
-                        tenetur eligendi perspiciatis, aut veniam labore.</p>
-                </div>
-                
-            </div>
-
-            <div class="articulo">
-                <div>
-                    <h3>Mirá esto</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, asperiores. Laudantium pariatur
-                        ducimus magni reprehenderit aspernatur ipsum consequatur eligendi id velit. Ducimus ea iusto
-                        recusandae quasi suscipit ratione commodi doloribus!</p>
-                </div>
-            </div>
+ <h2>Artículos</h2>
+ <div class="articulos">
+   <form class="formulario" action="/editar" method="get">
+     <input type="search" name="q" {{#if q}}value="{{q}}"{{/if}}>
+     <button type="submit">Buscar</button>
+   </form>
+ </div>
+      {{#each articulos}}
+        <div class="articulo"> <a href="/articulo/{{id}}"></a>
+            <h3>{{titulo}}</h3>
+            <h4>{{subtitulo}}</h4>
+            <p>{{resumen}}</p>
+           
         </div>
+      {{/each}}
+      {{#if is_search}}
+        {{#unless articulos.length}}
+        <p>No se encontraron resultados para <b>"{{q}}"</b></p>
+        {{/unless}}
+        {{/if}}
