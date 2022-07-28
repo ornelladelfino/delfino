@@ -1,11 +1,16 @@
 
+main.holder{
+    box-sizing: border-box;
+}
+header{
+    height: 180px;
+}
 header h1{
     font-size: 60px;
 }
 .social a img{
 display: none;
 }
-
 nav ul{
 padding: 0;   
 display: block;
@@ -13,16 +18,19 @@ text-align: center;
 width: 100%;
 }
 nav ul.holder{
+    
+    max-height: 0;
+    box-sizing: border-box;
+    display: none;
+
+}
+nav.abierto ul.holder{
     display: flex ;
     flex-direction: column;
     padding-left: 0;
     padding-right: 0;
-    max-height: 0;
-    box-sizing: border-box;
-
-}
-nav.abierto ul.holder{
     max-height: 100vh;
+    box-sizing: border-box;
 }/* resolver esto */
 #menuToggle{
     text-decoration: none;
@@ -34,7 +42,7 @@ nav.abierto ul.holder{
     color: white;
     font-weight: bold;
     position: relative;
-    top: -16px;
+    top: -5px;
     left: 41%;
 display: inline-block;
 }
@@ -48,7 +56,10 @@ display: inline-block;
     display: none; 
 }
 .libros{
-    display: block;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 .libro img{
     opacity: 1;  
@@ -61,11 +72,15 @@ display: inline-block;
     text-align: center;   
 }
 .noticias{
-    padding: 5px;
+    
     display: block;
+    box-sizing: border-box;
 }
 .noticia{
     width: 98%;   
+    box-sizing: border-box;
+    overscroll-behavior: scroll;
+    
 }
 .fotito img{
    display: none;
@@ -73,6 +88,7 @@ display: inline-block;
 .notita{
     text-align: center;
 }
+
 .noticia a{
     text-decoration: none;
     color: black;
@@ -85,10 +101,14 @@ display: inline-block;
 }
 
 .formulario{
-    display: block;
+display: block;
    width: 100%;
    box-sizing: border-box;
-
+   gap: 0;
+}
+.formulario input,
+.formulario textarea{
+    box-sizing: border-box;
 }
 form input[type="submit"]{
     width: 20%;
@@ -96,20 +116,27 @@ form input[type="submit"]{
     position: relative;
     left: 20px;
 }
-.holder{
-   
+.holder{  
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin: 0;
     box-sizing: border-box;
-}
-footer{
-    width: 100%;
 }
 .dropdown-content{
     display: none;
 }
-body{
-    box-sizing: border-box ;
+.holder, .movilholder{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
 }
+footer{
+    width: 100%;
+}
+body{
+    position: relative;
+    left: auto;
+}
+

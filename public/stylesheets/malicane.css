@@ -160,6 +160,7 @@ footer .login:hover{
 .holder{
     width: 1060px;
     margin: 0 auto;
+    box-sizing: border-box;
     
 
 }
@@ -206,7 +207,7 @@ footer .login:hover{
     text-align: center;
     border: 5px solid rgba(153, 102, 102, .9);
     border-radius: 5px;
-    
+    box-sizing: border-box;
 }
 
 .libro h3{
