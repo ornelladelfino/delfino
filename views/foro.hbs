@@ -1,21 +1,26 @@
+<h2>Artículos</h2>
+<div class="articulos">
+  <div>
+    <form class="formulario" action="/foro" method="get">
+      <input type="search" name="q" {{#if q}}value="{{q}}" {{/if}}>
+      <button id="busqueda" type="submit">Buscar</button>
+    </form>
+  </div>
+  {{#each articulos}}
+  <div class="articulo">
 
- <h2>Artículos</h2>
- <div class="articulos">
-   <form class="formulario" action="/editar" method="get">
-     <input type="search" name="q" {{#if q}}value="{{q}}"{{/if}}>
-     <button type="submit">Buscar</button>
-   </form>
- </div>
-      {{#each articulos}}
-        <div class="articulo"> <a href="/articulo/{{id}}"></a>
-            <h3>{{titulo}}</h3>
-            <h4>{{subtitulo}}</h4>
-            <p>{{resumen}}</p>
-           
-        </div>
-      {{/each}}
-      {{#if is_search}}
-        {{#unless articulos.length}}
-        <p>No se encontraron resultados para <b>"{{q}}"</b></p>
-        {{/unless}}
-        {{/if}}
+    <a href="articulo/{{id}}">
+    <h3>{{titulo}}</h3>
+    <h4>{{subtitulo}}</h4>
+    <p>{{resumen}} Ver mas...</p>
+    </a>
+
+  </div>
+  {{/each}}
+
+  {{#if is_search}}
+  {{#unless articulos.length}}
+  <p>No se encontraron resultados para <b>"{{q}}"</b></p>
+  {{/unless}}
+  {{/if}}
+</div>

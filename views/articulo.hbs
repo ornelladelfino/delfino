@@ -1,7 +1,8 @@
- {{#each articulos.id}}
- <div class="opinion">
-<h2>{{titulo}}</h2>
-<h3>{{subtitulo}}</h3>
-<p>{{cuerpo}}</p>
-<p class="firma">{{autor}}</p>
-{{/each}}
+<div class="opinion">
+    {{#if articulos.id}}
+    <h2>{{titulo}}</h2>
+    <h3>{{subtitulo}}</h3>
+    <p>{{cuerpo}}</p>
+    <p class="firma">{{autor}}</p>
+    {{/if}}
+</div>

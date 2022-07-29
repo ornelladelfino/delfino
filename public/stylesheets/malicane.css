@@ -394,14 +394,14 @@ left: 50px;
 /* inicio foro */
 .articulos{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    gap: 5px;
+    /* justify-content: space-around; */
 }
 .articulo{
-    width: 30%; 
+   /*  width: 30%;  */
     overflow:scroll;
     background-color: rgba(255,255,255,0.4);
-  margin: 5px;
   border: 2px solid rgba(153, 102, 102, .9);
   padding: 10px;
   border-radius: 20px;
@@ -544,3 +544,16 @@ form input[type="submit"]:hover{
 
 /* fin contacto */
 
+#busqueda{
+    background-color: rgba(155, 122, 114, 1);
+    width: 20%;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    border: 5px solid rgba(153, 102, 102, .9);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+#busqueda:hover{
+    transform: scale(1.1);
+}
