@@ -8,7 +8,8 @@ router.get('/:id', async function(req, res, next) {
   var articulo = await articulosModel.getArticuloByID(id);
   res.render('articulo', {
     articulo,
-    isForo: true
+    isForo: true,
+    
   });
 });
 
