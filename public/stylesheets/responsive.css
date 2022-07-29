@@ -22,6 +22,7 @@ nav ul.holder{
     max-height: 0;
     box-sizing: border-box;
     display: none;
+    
 
 }
 nav.abierto ul.holder{
@@ -96,7 +97,14 @@ display: inline-block;
 .articulos{
     display: block;
 }
+#busqueda{
+    position: relative;
+    left: 75%;
+    top: 3px;
+}
 .articulo{
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
 }
 
@@ -133,8 +141,8 @@ form input[type="submit"]{
     margin: 0;
 }
 footer{
-    width: 100%;
-}
+    width: 100%;}
+   
 body{
     position: relative;
     left: auto;

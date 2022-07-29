@@ -420,7 +420,7 @@ left: 50px;
   color: black;
   text-decoration: none;
 }
-.articulo:nth-child(1){
+.articulo:nth-child(2){
     background-image: url(/images/escribiendo.png);
 
     background-repeat: no-repeat;
@@ -432,7 +432,7 @@ left: 50px;
     background-position: center;
 
 }
-.articulo:nth-child(6){
+.articulo:nth-child(4){
     background-image: url(/images/idea.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -468,6 +468,7 @@ left: 50px;
 .opinion h2{
     margin-bottom: 40px
 }
+
 .firma{
     font-weight: bold;
     text-align: right;
